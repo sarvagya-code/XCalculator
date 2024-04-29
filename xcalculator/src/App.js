@@ -15,7 +15,11 @@ function App() {
   const calculate = () => {
     try {
       const result = eval(input);
+      if(input === ""){
+        setResult('Error')
+      }else{
       setResult(result);
+      }
     } catch (error) {
       setResult('Error');
     }
